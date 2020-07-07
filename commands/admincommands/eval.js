@@ -8,7 +8,7 @@ exports.run = async (client, message, args, DarkEmbed) => {
     if (evaled instanceof Promise) evaled = await evaled;
     if(!evaled) return await message.reply('I can\'t eval air...');
     if (typeof evaled !== "string") evaled = require("util").inspect(evaled)
-    embed.setDescription("**Your command was**\n \`\`\`" + args.join(" ") + "\`\`\`\n **Response:** \n\`\`\`" + clean(evaled).replace('NzAwODI1Mjg3MTcyMjkyNzQ5.XvB2DA.T_xOZXnTa67D3NtHdBL_4Yeg5B8', 'you tried :3') + "```")
+    embed.setDescription("**Your command was**\n \`\`\`" + args.join(" ") + "\`\`\`\n **Response:** \n\`\`\`" + clean(evaled).replace('', 'you tried :3') + "```")
     return await message.channel.send(embed)
   } catch (err) {
     embed.setDescription(("**Your command was**\n \`\`\`" + args.join(" ") + "\`\`\`\n **Error:** \n\`\`\`" + clean(err) + "```"))
